@@ -27,7 +27,7 @@ through its command line. It is one folder with a `SKILL.md`. Do this:
    https://github.com/georgeantonopoulos/batiq-skill/archive/refs/heads/main.zip
    and unzip its contents into the folder.
 
-3. **Check it:** `<folder>/SKILL.md` exists and starts with `name: batiq`.
+3. **Check it:** `<folder>/SKILL.md` exists and its front matter has `name: batiq`.
 
 4. **Check BATIQ is installed** by looking for `batiq-headless` (see
    `SKILL.md`, section 2). If it is missing, tell the user it can be

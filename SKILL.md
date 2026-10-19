@@ -118,8 +118,9 @@ Build a comp and render it (PNG to keep it small; EXR, TIFF, DPX, JPEG also work
 {"jsonrpc":"2.0","id":3,"method":"render","params":{"project":"/work/sh010/comp.batiq","output":"/work/sh010/renders/sh010.####.png","frames":{"start":1001,"end":1010,"step":1}}}
 ```
 
-(Requests must each be on one line in the real file; they are wrapped here
-for reading.) More recipes: [references/recipes.md](references/recipes.md).
+Point the Read at frames that exist: a path with no files is stored as
+typed, and the render then fails on the missing plate. (Requests must each
+be on one line in the real file; they are wrapped here for reading.) More recipes: [references/recipes.md](references/recipes.md).
 
 ## 5. Rules that save you
 
