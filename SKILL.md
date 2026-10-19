@@ -92,7 +92,8 @@ The tool tells you what it accepts. Use these instead of guessing:
   meshes, cameras).
 - **What can be animated:** `{"action":"animatable","node":"..."}`.
 - **The graph:** `{"action":"list"}`.
-- **Node kinds:** the desktop guide. Kinds accept the label or stored name,
+- **Node kinds:** create an unknown kind; newer builds list every kind in
+  the error (older ones: see the desktop guide). Kinds accept the label or stored name,
   any case (`"Batiq"` or `"Coverage"`, `"OCIO ColorSpace"` or `"ColorSpace"`).
 
 Inside a batch, refer to a node by id, by name, or `"$N"` (the Nth node
@@ -124,8 +125,9 @@ be on one line in the real file; they are wrapped here for reading.) More recipe
 
 ## 5. Rules that save you
 
-- **Give `render` a full file pattern** (`/dir/name.####.exr`). Make the
-  folder first.
+- **Give `render` a full file pattern** (`/dir/name.####.exr`). Newer
+  builds also take a folder (`/dir/`) and name the frames after the Write;
+  older ones write `dir.####.exr` beside it, so the pattern is safe everywhere.
 - **A render can fail with a normal `result`.** Read the `render_event`
   stream: success is a terminal `finished` event. Exit code 0 proves nothing.
 - **Batches are all-or-nothing.** On error nothing is written and the message
